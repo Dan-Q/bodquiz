@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Bodleian Christmas Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="client.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="control.js"></script>
+  </head>
+  <body>
+    <h1 class="text-center">Control Panel</h1>
+    <div class="container-fluid needs-no-js">
+      Loading... please wait...
+    </div>
+    <div class="container-fluid needs-js">
+      <p>State: <span id="state"></span></p>
+      <p>
+        <a class="btn btn-default btn-block" href="#" data-state="play">Play</a>
+        <a class="btn btn-default btn-block" href="#" data-state="pause">Pause</a>
+        <a class="btn btn-default btn-block" href="#" data-state="advert">Advert</a>
+      </p>
+      <p>Sidebar: <span id="sidebar"></span></p>
+      <p>
+        <a class="btn btn-default btn-block" href="#" data-sidebar="howto">How To Play</a>
+        <a class="btn btn-default btn-block" href="#" data-sidebar="scores">Scoreboard</a>
+      </p>
+      <p>
+        Heavyweight operations:
+      </p>
+      <p>
+        <a class="btn btn-default btn-block" href="#" data-command="next-question">Next question</a>
+        <a class="btn btn-default btn-block" href="#" data-operation="kill-all-users">Kill all user sessions</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+@font-face {
+  font-family: 'Bergamo Std';
+  src: url('fonts/bergamostd-regular-webfont.eot');
+  src: url('fonts/bergamostd-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/bergamostd-regular-webfont.woff') format('woff'),
+       url('fonts/bergamostd-regular-webfont.ttf') format('truetype'),
+       url('fonts/bergamostd-regular-webfont.svg#bergamo_stdregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 67px; /* 200px */
+}
+
+/* Countdown timer */
+#timer {
+  position: absolute;
+  top: 40px; /* 120px */
+  left: 2423px; /* 7270px */
+  width: 100px; /* 300px */
+  text-align: center;
+}
+
+#timer > #slice {
+  position:absolute;
+  top: -23px; /* -70px */
+  left: -13px; /* -40px */
+  width:2em;
+  height:2em;
+  clip:rect(0px,2em,2em,1em);
+}
+
+#timer > #slice.gt50 {
+  clip:rect(auto, auto, auto, auto);
+}
+
+#timer > #slice > .pie {
+  border: 0.2em solid #c0c0c0;
+  position:absolute;
+  width:1.6em; /* 1 - (2 * border width) */
+  height:1.6em; /* 1 - (2 * border width) */
+  clip:rect(0em,1em,2em,0em);
+  border-radius:1em; 
+}
+
+#timer > #slice > .pie.fill {
+  transform:rotate(180deg) !important;
+}
+
+/* Question/answer section */
+#question {
+  position: absolute;
+  top: 133px; /* 400px */
+  left: 33px; /* 100px */
+  width: 2483px; /* 7450px */
+}
+
+#question ul.as li {
+  float: left;
+  list-style: none;
+  width: 1133px; /* 3400px */
+  text-align: center;
+  border: 17px solid #c0c0c0; /* 50px */
+  box-sizing: border-box;
+  margin: 33px 0 0 33px; /* 100px 0 0 100px */
+  padding: 12px 17px; /* 35px 50px */
+  transition: color 1s, border-color 2s, opacity 4s 0.5s;
+}
+
+#question ul.as li.correct {
+  border-color: #5CB85C;
+  background-color: #5CB85C;
+}
+
+#question ul.as li.incorrect {
+  border-color: #D9534F;
+  background-color: #D9534F;
+  opacity: 0.25;
+}
+
+/* "Explanation" section */
+#question .explanation {
+  clear: both;
+  padding-top: 33px; /* 100px */
+  opacity: 0.75;
+  text-align: center;
+}
+
+/* Scoreboard section */
+#scoreboard {
+  position: absolute;
+  top: 0px;
+  left: 2560px; /* 7680px */
+  width: 805px; /* 1920px */
+  height: 1122px; /* 3240px; */
+  background: #002A5C;
+}
+
+#scoreboard > * {
+  height: 1122px; /* 3240px; */
+  width: 680px; /* 1920px */
+  font-size: 40px; /* 120px */
+}
+
+#scoreboard #howto {
+  padding-top: 67px; /* 200px */
+  text-align: center;
+}
+
+#howto img {
+  max-height: 360px;
+  min-height: 200px;
+}
+
+#scoreboard #scores {
+  position: absolute;
+  transition: top 2s ease-in-out;
+  top: 1122px; /* 3240px; */
+  background: white;
+  color: black;
+  border-left: 5px solid #c0c0c0;
+  box-sizing: border-box;
+  padding: 13px 20px; /* 40px 60px */
+}
+
+#scoreboard #scores h1 {
+  font-family: 'Bergamo Std', 'Times New Roman', serif;
+  font-size: 53px; /* 160px */
+}
+
+body.scores #scoreboard #scores {
+  top: 0px;  
+}
+
+#scoreboard #high-scores {
+  font-size: 32px;
+  margin: 0 33px; /* 0 100px */
+}
+
+#high-scores li {
+  margin: 8px 0; /* 25px 0 */
+}
+
+#high-scores li span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#high-scores li .identity {
+  width: 333px; /* 1000px */
+}
+
+#high-scores li .right,
+#high-scores li .wrong {
+  color: white;
+  text-align: center;
+  width: 67px; /* 200px */
+  border-radius: 8px; /* 25px */
+  padding: 5px; /* 15px */
+  margin-right: 5px; /* 15px */
+}
+
+#high-scores li .right {
+  background: #5cb85c;
+}
+
+#high-scores li .wrong {
+  background: #d9534f;
+}
+
+/* Advert mode */
+#advert {
+  position: absolute;
+  left: 0;
+  top: 1122px; /* 3240px */
+  width: 2560px; /* 7680px */
+  height: 1080px; /* 3240px */
+  background: white;
+  transition: top 2s ease-in-out;
+  color: black;
+  text-align: center;
+  padding-top: 200px; /* 600px */
+}
+
+#advert img {
+  width: 400px; /* max-width: 1200px */
+  opacity: 0;
+  transition: opacity 1s 2s;
+}
+
+#advert h1,
+#advert h2 {
+  font-family: 'Bergamo Std', 'Times New Roman', serif;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s 3s;
+}
+
+#advert p {
+  color: #c0c0c0;
+  margin: 23px 67px; /* 70px 200px */
+  font-size: 80%;
+  border-top: 5px solid #c0c0c0;
+  padding: 23px; /* 70px */
+  opacity: 0;
+  transition: opacity 1s 4s;
+}
+
+body.advert #advert {
+  top: 0;
+}
+
+body.advert #advert * {
+  opacity: 1;
+}

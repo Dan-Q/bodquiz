@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Bodleian Christmas Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="client.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="client.js"></script>
+  </head>
+  <body>
+    <h1 class="text-center">Christmas Quiz</h1>
+    <div class="container-fluid needs-no-js">
+      Loading... please wait...
+    </div>
+    <div class="container-fluid needs-js">
+      <p id="question">
+      </p>
+
+      <div id="play">
+        <a class="btn btn-default btn-block" href="#" data-letter="A" data-number="1"></a>
+        <a class="btn btn-default btn-block" href="#" data-letter="B" data-number="2"></a>
+        <a class="btn btn-default btn-block" href="#" data-letter="C" data-number="3"></a>
+        <a class="btn btn-default btn-block" href="#" data-letter="D" data-number="4"></a>
+      </div>
+
+      <p id="post-click-instructions">
+      </p>
+    </div>
+    <div class="container-fluid" id="paused">
+      <p>
+        The game is paused. Keep an eye on the big screen for updates.
+      </p>
+    </div>
+
+    <div id="identity" class="needs-js">
+      <div class="container-fluid text-center">
+        <span class="label label-success" id="score-right">0</span> right
+        <span class="label label-danger" id="score-wrong">0</span> wrong
+        <span class="label label-default" id="score-skipped">0</span> skipped
+      </div>
+      <hr />
+      <div class="container-fluid">
+        Your name:
+        <small class="text-muted">(change at will)</small>
+        <input type="text" class="form-control" id="name" />
+      </div>
+    </div>
+  </body>
+</html>

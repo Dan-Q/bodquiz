@@ -1,0 +1,68 @@
+body .needs-js,
+body.js .needs-no-js {
+  display: none;
+}
+
+body.js .needs-js {
+  display: inherit;
+}
+
+#show-answer {
+  display: none;
+}
+
+body.show-answer #show-answer {
+  display: inherit;
+}
+
+h1 {
+  background: black;
+  color: white;
+  margin-top: 0;
+  padding: 9px 0 6px;
+}
+
+#question {
+  min-height: 6em;
+}
+
+#play a {
+  text-align: left;
+}
+
+#play a.selected {
+  border: 3px solid #5CB85C;
+  padding: 4px 8px;
+}
+
+#identity {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom: 9px;
+  background: #434343;
+  color: white;
+}
+
+#identity hr {
+  margin: 3px 0 1px;
+}
+
+#post-click-instructions {
+  text-align: center;
+  font-size: 80%;
+  padding-top: 15px;
+}
+
+#paused {
+  display: none;
+}
+
+body.paused #paused,
+body.paused #identity {
+  display: block;
+}
+
+body.paused .needs-js {
+  display: none;
+}
